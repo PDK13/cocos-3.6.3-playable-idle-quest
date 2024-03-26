@@ -1,0 +1,20 @@
+
+dash_fire.png
+size: 559, 252
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+SKILL8
+  rotate: false
+  xy: 499, 192
+  size: 58, 58
+  orig: 58, 60
+  offset: 0, 1
+  index: -1
+dash_fire
+  rotate: false
+  xy: 2, 2
+  size: 495, 248
+  orig: 500, 258
+  offset: 4, 9
+  index: -1

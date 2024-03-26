@@ -1,0 +1,76 @@
+
+bullet_fire.png
+size: 899, 480
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+fx_bullet_skill/SKILL0
+  rotate: false
+  xy: 300, 144
+  size: 273, 164
+  orig: 327, 196
+  offset: 25, 18
+  index: -1
+fx_bullet_skill/SKILL1
+  rotate: false
+  xy: 2, 2
+  size: 287, 139
+  orig: 327, 196
+  offset: 22, 26
+  index: -1
+fx_bullet_skill/SKILL2
+  rotate: false
+  xy: 302, 316
+  size: 299, 162
+  orig: 327, 196
+  offset: 18, 17
+  index: -1
+fx_bullet_skill/SKILL3
+  rotate: false
+  xy: 575, 3
+  size: 298, 157
+  orig: 327, 196
+  offset: 12, 25
+  index: -1
+fx_bullet_skill/SKILL4
+  rotate: false
+  xy: 603, 321
+  size: 294, 157
+  orig: 327, 196
+  offset: 16, 25
+  index: -1
+fx_bullet_skill/SKILL5
+  rotate: false
+  xy: 575, 162
+  size: 308, 152
+  orig: 327, 196
+  offset: 8, 30
+  index: -1
+fx_bullet_skill/SKILL6
+  rotate: false
+  xy: 2, 310
+  size: 298, 168
+  orig: 327, 196
+  offset: 18, 17
+  index: -1
+fx_bullet_skill/SKILL7
+  rotate: false
+  xy: 2, 143
+  size: 296, 165
+  orig: 327, 196
+  offset: 12, 17
+  index: -1
+fx_bullet_skill/SKILL8
+  rotate: false
+  xy: 291, 12
+  size: 36, 36
+  orig: 52, 52
+  offset: 8, 8
+  index: -1
+fx_bullet_skill/SKILL9
+  rotate: false
+  xy: 291, 50
+  size: 109, 91
+  orig: 125, 92
+  offset: 7, 0
+  index: -1

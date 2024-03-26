@@ -1,0 +1,47 @@
+{
+  "layer": [
+    {
+      "name": "default",
+      "value": 1
+    },
+    {
+      "name": "game",
+      "value": 2
+    }
+  ],
+  "general": {
+    "designResolution": {
+      "width": 1080,
+      "height": 1920,
+      "fitHeight": true
+    }
+  },
+  "physics": {
+    "collisionMatrix": {
+      "0": 31,
+      "1": 49,
+      "2": 9,
+      "3": 5,
+      "4": 3,
+      "5": 2
+    },
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "player"
+      },
+      {
+        "index": 2,
+        "name": "monster"
+      },
+      {
+        "index": 3,
+        "name": "hit-monster"
+      },
+      {
+        "index": 4,
+        "name": "hit-player"
+      }
+    ]
+  }
+}

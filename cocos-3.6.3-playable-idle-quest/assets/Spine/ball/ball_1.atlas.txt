@@ -1,0 +1,202 @@
+
+ball_1.png
+size: 369,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a_21/1_idle_lm
+  rotate: false
+  xy: 153, 27
+  size: 67, 14
+  orig: 67, 14
+  offset: 0, 0
+  index: -1
+a_21/2_hurt
+  rotate: false
+  xy: 280, 167
+  size: 87, 100
+  orig: 87, 100
+  offset: 0, 0
+  index: -1
+a_21/3_laugh_connguoi
+  rotate: true
+  xy: 321, 13
+  size: 59, 16
+  orig: 59, 16
+  offset: 0, 0
+  index: -1
+a_21/3_laugh_lm
+  rotate: false
+  xy: 222, 29
+  size: 67, 17
+  orig: 67, 17
+  offset: 0, 0
+  index: -1
+a_21/3_laugh_mieng
+  rotate: false
+  xy: 221, 97
+  size: 55, 33
+  orig: 55, 33
+  offset: 0, 0
+  index: -1
+a_21/4_6
+  rotate: false
+  xy: 280, 111
+  size: 87, 54
+  orig: 87, 54
+  offset: 0, 0
+  index: -1
+a_21/4_sad_lmp
+  rotate: false
+  xy: 339, 35
+  size: 24, 25
+  orig: 24, 25
+  offset: 0, 0
+  index: -1
+a_21/4_sad_lmt
+  rotate: true
+  xy: 339, 10
+  size: 23, 25
+  orig: 23, 25
+  offset: 0, 0
+  index: -1
+a_21/4_sad_mimat
+  rotate: true
+  xy: 126, 40
+  size: 86, 25
+  orig: 86, 25
+  offset: 0, 0
+  index: -1
+a_21/4_sadmieng
+  rotate: false
+  xy: 2, 2
+  size: 50, 12
+  orig: 50, 16
+  offset: 0, 2
+  index: -1
+a_21/5_skinby_conguoi
+  rotate: false
+  xy: 219, 48
+  size: 74, 24
+  orig: 74, 26
+  offset: 0, 2
+  index: -1
+a_21/5_skinby_lm
+  rotate: false
+  xy: 278, 91
+  size: 79, 18
+  orig: 79, 18
+  offset: 0, 0
+  index: -1
+a_21/5_skinby_mieng
+  rotate: false
+  xy: 223, 2
+  size: 69, 25
+  orig: 69, 25
+  offset: 0, 0
+  index: -1
+a_21/6_revive_lm
+  rotate: false
+  xy: 91, 16
+  size: 56, 21
+  orig: 56, 21
+  offset: 0, 0
+  index: -1
+a_21/6_revive_mieng
+  rotate: false
+  xy: 221, 75
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+a_21/mieng_bt
+  rotate: false
+  xy: 221, 75
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+a_21/9_like_connguoi
+  rotate: false
+  xy: 149, 11
+  size: 72, 14
+  orig: 72, 14
+  offset: 0, 0
+  index: -1
+a_21/9_like_lm
+  rotate: false
+  xy: 251, 74
+  size: 75, 15
+  orig: 75, 15
+  offset: 0, 0
+  index: -1
+a_21/9_like_mieng
+  rotate: false
+  xy: 54, 3
+  size: 38, 11
+  orig: 38, 11
+  offset: 0, 0
+  index: -1
+a_21/connguoi
+  rotate: true
+  xy: 295, 2
+  size: 70, 24
+  orig: 70, 24
+  offset: 0, 0
+  index: -1
+a_21/dautrong
+  rotate: false
+  xy: 143, 132
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+a_21/dauvien
+  rotate: false
+  xy: 2, 128
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+a_21/mattrang
+  rotate: false
+  xy: 2, 72
+  size: 87, 54
+  orig: 87, 54
+  offset: 0, 0
+  index: -1
+a_21/mimat
+  rotate: false
+  xy: 2, 16
+  size: 87, 54
+  orig: 87, 54
+  offset: 0, 0
+  index: -1
+a_21/mimat_2
+  rotate: true
+  xy: 91, 39
+  size: 87, 33
+  orig: 87, 33
+  offset: 0, 0
+  index: -1
+heartliike
+  rotate: true
+  xy: 339, 62
+  size: 27, 24
+  orig: 27, 24
+  offset: 0, 0
+  index: -1
+taychi
+  rotate: false
+  xy: 153, 86
+  size: 66, 44
+  orig: 66, 44
+  offset: 0, 0
+  index: -1
+tayup
+  rotate: false
+  xy: 153, 43
+  size: 64, 41
+  orig: 64, 41
+  offset: 0, 0
+  index: -1

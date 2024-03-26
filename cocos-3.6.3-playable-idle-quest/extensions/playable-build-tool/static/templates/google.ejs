@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="ad.size" content="width=320,height=480">
+  <%- include("parts/head", {head}) %>
+  <script type="text/javascript" src="https://tpc.googlesyndication.com/pagead/gadgets/html5/api/exitapi.js"> </script>
+  
+  <script>
+    function openGameStoreUrl(link) {
+		ExitApi.exit();
+	}
+   </script>
+</head>
+
+<body>
+  <%- include("parts/body", {body})%>
+  <script>window.addEventListener("DOMContentLoaded", start);</script>
+</body>
+
+</html>

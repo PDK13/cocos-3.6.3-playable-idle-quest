@@ -1,0 +1,188 @@
+
+smash_down.png
+size: 491, 455
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+SKILL9
+  rotate: false
+  xy: 438, 26
+  size: 32, 26
+  orig: 38, 28
+  offset: 3, 1
+  index: -1
+fx1_1
+  rotate: false
+  xy: 249, 2
+  size: 59, 48
+  orig: 116, 115
+  offset: 40, 14
+  index: -1
+fx1_2
+  rotate: false
+  xy: 391, 87
+  size: 98, 96
+  orig: 116, 115
+  offset: 11, 4
+  index: -1
+fx1_3
+  rotate: false
+  xy: 172, 223
+  size: 116, 112
+  orig: 116, 115
+  offset: 0, 0
+  index: -1
+fx1_4
+  rotate: false
+  xy: 2, 8
+  size: 109, 86
+  orig: 116, 115
+  offset: 6, 19
+  index: -1
+fx1_5
+  rotate: false
+  xy: 290, 195
+  size: 106, 84
+  orig: 116, 115
+  offset: 10, 24
+  index: -1
+fx1_6
+  rotate: false
+  xy: 285, 133
+  size: 104, 60
+  orig: 116, 115
+  offset: 12, 49
+  index: -1
+fx1_7
+  rotate: false
+  xy: 116, 68
+  size: 82, 43
+  orig: 116, 115
+  offset: 13, 68
+  index: -1
+fx1_8
+  rotate: false
+  xy: 371, 10
+  size: 65, 15
+  orig: 116, 115
+  offset: 28, 78
+  index: -1
+fx2_1
+  rotate: false
+  xy: 278, 52
+  size: 82, 79
+  orig: 128, 129
+  offset: 22, 25
+  index: -1
+fx2_2
+  rotate: false
+  xy: 116, 113
+  size: 109, 108
+  orig: 128, 129
+  offset: 10, 13
+  index: -1
+fx2_3
+  rotate: false
+  xy: 343, 336
+  size: 114, 117
+  orig: 128, 129
+  offset: 5, 8
+  index: -1
+fx2_4
+  rotate: false
+  xy: 398, 185
+  size: 90, 94
+  orig: 128, 129
+  offset: 17, 16
+  index: -1
+fx2_5
+  rotate: false
+  xy: 185, 3
+  size: 62, 63
+  orig: 128, 129
+  offset: 35, 34
+  index: -1
+fx2_6
+  rotate: false
+  xy: 227, 92
+  size: 49, 49
+  orig: 128, 129
+  offset: 41, 42
+  index: -1
+fx2_7
+  rotate: false
+  xy: 438, 54
+  size: 30, 31
+  orig: 128, 129
+  offset: 47, 50
+  index: -1
+fx3_1
+  rotate: false
+  xy: 290, 281
+  size: 159, 53
+  orig: 175, 128
+  offset: 0, 4
+  index: -1
+fx3_2
+  rotate: false
+  xy: 2, 223
+  size: 168, 103
+  orig: 175, 128
+  offset: 2, 4
+  index: -1
+fx3_3
+  rotate: false
+  xy: 171, 337
+  size: 170, 116
+  orig: 175, 128
+  offset: 0, 4
+  index: -1
+fx3_4
+  rotate: false
+  xy: 2, 328
+  size: 167, 125
+  orig: 175, 128
+  offset: 4, 3
+  index: -1
+fx3_5
+  rotate: false
+  xy: 2, 96
+  size: 112, 125
+  orig: 175, 128
+  offset: 52, 3
+  index: -1
+fx3_6
+  rotate: false
+  xy: 459, 410
+  size: 28, 43
+  orig: 175, 128
+  offset: 128, 51
+  index: -1
+fx_rocks_1
+  rotate: false
+  xy: 371, 27
+  size: 65, 58
+  orig: 65, 58
+  offset: 0, 0
+  index: -1
+fx_rocks_2
+  rotate: false
+  xy: 227, 143
+  size: 56, 78
+  orig: 56, 78
+  offset: 0, 0
+  index: -1
+fx_rocks_3
+  rotate: false
+  xy: 113, 7
+  size: 70, 59
+  orig: 70, 59
+  offset: 0, 0
+  index: -1
+fx_rocks_4
+  rotate: false
+  xy: 310, 12
+  size: 59, 38
+  orig: 59, 38
+  offset: 0, 0
+  index: -1

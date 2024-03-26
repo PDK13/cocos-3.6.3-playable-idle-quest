@@ -1,0 +1,265 @@
+
+Soul_keeper.png
+size: 1003, 799
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+0
+  rotate: false
+  xy: 293, 214
+  size: 38, 35
+  orig: 38, 36
+  offset: 0, 1
+  index: -1
+000
+  rotate: false
+  xy: 818, 65
+  size: 115, 65
+  orig: 115, 65
+  offset: 0, 0
+  index: -1
+00000
+  rotate: false
+  xy: 388, 193
+  size: 146, 330
+  orig: 146, 330
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 388, 2
+  size: 124, 189
+  orig: 124, 189
+  offset: 0, 0
+  index: -1
+1111
+  rotate: false
+  xy: 904, 315
+  size: 97, 85
+  orig: 97, 85
+  offset: 0, 0
+  index: -1
+111111
+  rotate: false
+  xy: 770, 404
+  size: 114, 184
+  orig: 114, 184
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 493, 545
+  size: 253, 252
+  orig: 280, 279
+  offset: 13, 13
+  index: -1
+2222
+  rotate: false
+  xy: 874, 222
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+222222
+  rotate: false
+  xy: 493, 525
+  size: 12, 18
+  orig: 12, 18
+  offset: 0, 0
+  index: -1
+3333
+  rotate: false
+  xy: 676, 5
+  size: 57, 57
+  orig: 57, 57
+  offset: 0, 0
+  index: -1
+333333
+  rotate: false
+  xy: 2, 179
+  size: 204, 308
+  orig: 204, 308
+  offset: 0, 0
+  index: -1
+4444
+  rotate: false
+  xy: 618, 16
+  size: 56, 162
+  orig: 56, 162
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 683, 197
+  size: 62, 122
+  orig: 62, 122
+  offset: 0, 0
+  index: -1
+55
+  rotate: false
+  xy: 747, 132
+  size: 125, 84
+  orig: 125, 84
+  offset: 0, 0
+  index: -1
+5555
+  rotate: false
+  xy: 676, 64
+  size: 140, 66
+  orig: 140, 66
+  offset: 0, 0
+  index: -1
+555555
+  rotate: false
+  xy: 536, 353
+  size: 158, 190
+  orig: 158, 190
+  offset: 0, 0
+  index: -1
+555555_2
+  rotate: false
+  xy: 949, 402
+  size: 50, 186
+  orig: 50, 186
+  offset: 0, 0
+  index: -1
+555555_3
+  rotate: false
+  xy: 696, 321
+  size: 72, 222
+  orig: 72, 222
+  offset: 0, 0
+  index: -1
+555555_4
+  rotate: false
+  xy: 886, 404
+  size: 61, 184
+  orig: 61, 184
+  offset: 0, 0
+  index: -1
+555555_5
+  rotate: false
+  xy: 337, 41
+  size: 49, 208
+  orig: 49, 208
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 514, 180
+  size: 10, 11
+  orig: 11, 12
+  offset: 1, 0
+  index: -1
+6666
+  rotate: false
+  xy: 747, 218
+  size: 125, 99
+  orig: 125, 99
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 514, 12
+  size: 15, 14
+  orig: 16, 17
+  offset: 0, 1
+  index: -1
+7777
+  rotate: false
+  xy: 2, 30
+  size: 333, 147
+  orig: 333, 147
+  offset: 0, 0
+  index: -1
+7777777
+  rotate: false
+  xy: 770, 319
+  size: 132, 83
+  orig: 132, 83
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 748, 569
+  size: 17, 19
+  orig: 20, 22
+  offset: 3, 0
+  index: -1
+8888
+  rotate: false
+  xy: 2, 489
+  size: 237, 308
+  orig: 237, 308
+  offset: 0, 0
+  index: -1
+888888
+  rotate: false
+  xy: 241, 492
+  size: 59, 31
+  orig: 59, 31
+  offset: 0, 0
+  index: -1
+8999999
+  rotate: false
+  xy: 874, 143
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 2, 6
+  size: 23, 22
+  orig: 24, 25
+  offset: 0, 2
+  index: -1
+999
+  rotate: false
+  xy: 241, 525
+  size: 250, 272
+  orig: 250, 272
+  offset: 0, 0
+  index: -1
+co
+  rotate: false
+  xy: 514, 28
+  size: 102, 150
+  orig: 102, 150
+  offset: 0, 0
+  index: -1
+sung
+  rotate: false
+  xy: 208, 251
+  size: 178, 236
+  orig: 178, 236
+  offset: 0, 0
+  index: -1
+than2
+  rotate: false
+  xy: 748, 590
+  size: 218, 207
+  orig: 218, 207
+  offset: 0, 0
+  index: -1
+tp
+  rotate: false
+  xy: 208, 179
+  size: 83, 70
+  orig: 83, 70
+  offset: 0, 0
+  index: -1
+tp2
+  rotate: false
+  xy: 735, 5
+  size: 45, 57
+  orig: 45, 57
+  offset: 0, 0
+  index: -1
+z
+  rotate: false
+  xy: 536, 180
+  size: 145, 171
+  orig: 148, 173
+  offset: 2, 1
+  index: -1

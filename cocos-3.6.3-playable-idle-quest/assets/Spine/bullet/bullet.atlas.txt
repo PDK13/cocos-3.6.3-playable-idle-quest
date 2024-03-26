@@ -1,0 +1,13 @@
+
+bullet.png
+size: 80,80
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bullet_red
+  rotate: false
+  xy: 2, 2
+  size: 76, 76
+  orig: 128, 128
+  offset: 26, 26
+  index: -1
