@@ -76,17 +76,18 @@ export default class CameraMovement extends Component {
 
     onLoad() {
         director.on(GameEvent.PLAYER_STOP, this.onFinish, this);
-        //director.on(GameEvent.PLAYER_X4, this.onPlayerX4, this);
-        //director.on(GameEvent.PLAYER_GROUND, this.onPlayerGround, this);
-        //director.on(GameEvent.PLAYER_BUBBLE, this.onPlayerBubble, this);
-        //director.on(GameEvent.PLAYER_NORMAL, this.onPlayerNormal, this);
-        //director.on(GameEvent.PLAYER_FLAG, this.onPlayerFlag, this);
+        director.on(GameEvent.PLAYER_X4, this.onPlayerX4, this);
+        director.on(GameEvent.PLAYER_GROUND, this.onPlayerGround, this);
+        director.on(GameEvent.PLAYER_BUBBLE, this.onPlayerBubble, this);
+        director.on(GameEvent.PLAYER_NORMAL, this.onPlayerNormal, this);
+        director.on(GameEvent.PLAYER_FLAG, this.onPlayerFlag, this);
         //
         if (this.m_camera == null)
             this.m_camera = this.getComponent(Camera);
         this.m_orthoHeight = this.m_camera.orthoHeight.valueOf();
         //
-        this.m_parallaxes = this.getComponentsInChildren(BackgroundParallax);
+        if (this.paralax)
+            this.m_parallaxes = this.getComponentsInChildren(BackgroundParallax);
         //
         if (this.lockX || this.lockY)
             this.m_lock = this.node.worldPosition.clone();
@@ -99,56 +100,57 @@ export default class CameraMovement extends Component {
             this.onUpdateBackground();
         });
         this.onCanvasResize(true);
+        this.onUpdateBackground();
         //
         this.m_target = this.node.worldPosition.clone();
-        //
-        this.onUpdateBackground();
     }
 
     lateUpdate(dt: number) {
-        let target = v3();
-        if (this.m_stop) {
-            target = this.m_finishPos;
-            this.m_target = this.m_target.lerp(target, this.smoothTime);
-            this.node.worldPosition = this.m_target;
-        }
-        else {
-            target = this.player.worldPosition.clone();
-            //
-            if (this.m_syncY)
-                this.m_targetY = target.y;
+        if (this.player != null) {
+            let target = v3();
+            if (this.m_stop) {
+                target = this.m_finishPos;
+                this.m_target = this.m_target.lerp(target, this.smoothTime);
+                this.node.worldPosition = this.m_target;
+            }
             else {
-                if ((this.m_targetY - target.y) > 100)
+                target = this.player.worldPosition.clone();
+                //
+                if (this.m_syncY)
                     this.m_targetY = target.y;
-                target.y = this.m_targetY + 300;
-            }
-            //
-            //LOCK:
-            if (this.lockX)
-                target.x = this.m_lock.x;
-            if (this.lockY)
-                target.y = this.m_lock.y;
-            //
-            //LIMIT:
-            if (this.limit) {
-                if (target.x > this.limitMax.x)
-                    target.x = this.limitMax.x;
-                else
-                    if (target.x < this.limitMin.x)
-                        target.x = this.limitMin.x;
+                else {
+                    if ((this.m_targetY - target.y) > 100)
+                        this.m_targetY = target.y;
+                    target.y = this.m_targetY + 300;
+                }
+                //
+                //LOCK:
+                if (this.lockX)
+                    target.x = this.m_lock.x;
+                if (this.lockY)
+                    target.y = this.m_lock.y;
+                //
+                //LIMIT:
+                if (this.limit) {
+                    if (target.x > this.limitMax.x)
+                        target.x = this.limitMax.x;
+                    else
+                        if (target.x < this.limitMin.x)
+                            target.x = this.limitMin.x;
 
-                if (target.y > this.limitMax.y)
-                    target.y = this.limitMax.y;
-                else
-                    if (target.y < this.limitMin.y)
-                        target.y = this.limitMin.y;
+                    if (target.y > this.limitMax.y)
+                        target.y = this.limitMax.y;
+                    else
+                        if (target.y < this.limitMin.y)
+                            target.y = this.limitMin.y;
+                }
+                //
+                target.x += this.offset.x;
+                target.y += this.offset.y;
+                //
+                this.m_target = this.m_target.lerp(target, this.smoothTime);
+                this.node.worldPosition = this.m_target;
             }
-            //
-            target.x += this.offset.x;
-            target.y += this.offset.y;
-            //
-            this.m_target = this.m_target.lerp(target, this.smoothTime);
-            this.node.worldPosition = this.m_target;
         }
         //
         if (this.paralax) {
@@ -185,6 +187,8 @@ export default class CameraMovement extends Component {
     }
 
     onUpdateBackground() {
+        if (this.background == null)
+            return;
         let ratio = 540 / this.m_camera.orthoHeight;
         this.background.scale = new Vec3(2 / ratio, 2 / ratio, 1);
     }

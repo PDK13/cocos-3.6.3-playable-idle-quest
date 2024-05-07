@@ -54,7 +54,7 @@ export class MonsterController extends Component {
         this.rigidbody = this.node.getComponent(RigidBody2D);
         //
         director.on(GameEvent.MONSTER_MOVE, this.onMove, this);
-        director.on(GameEvent.MONSTER_STOP, this.onStop, this);
+        director.on(GameEvent.MONSTER_BODY_STOP, this.onStop, this);
         director.on(GameEvent.PLAYER_DEAD, this.onPlayerDead, this);
         //
         director.on(PlayerSkill.PLAYER_SKILL_SLASH, this.onPlayerSkillSlash, this);

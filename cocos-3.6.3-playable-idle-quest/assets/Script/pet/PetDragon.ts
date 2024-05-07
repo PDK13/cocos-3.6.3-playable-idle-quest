@@ -33,7 +33,7 @@ export class PetDragon extends Component {
         this.shoot = this.node.getComponent(BaseShoot);
         //
         director.on(GameEvent.PLAYER_MOVE, this.onMove, this);
-        director.on(GameEvent.PLAYER_STOP, this.onStop, this);
+        director.on(GameEvent.PLAYER_BODY_STOP, this.onStop, this);
         director.on(GameEvent.PLAYER_ATTACK, this.onAttack, this);
     }
 

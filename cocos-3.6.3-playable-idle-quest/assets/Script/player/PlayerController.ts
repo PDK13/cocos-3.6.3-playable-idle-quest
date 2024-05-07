@@ -69,7 +69,7 @@ export class PlayerController extends Component {
         this.spineSlash = this.node.getChildByName('spine-slash').getComponent(BaseSpine);
         //
         director.on(GameEvent.PLAYER_MOVE, this.onMove, this);
-        director.on(GameEvent.PLAYER_STOP, this.onStop, this);
+        director.on(GameEvent.PLAYER_BODY_STOP, this.onStop, this);
         director.on(GameEvent.PLAYER_ATTACK, this.onAttack, this);
         director.on(PlayerStat.PLAYER_ATK_UPDATE, this.onAtkUpgrade, this);
         director.on(PlayerStat.PLAYER_HP_UPDATE, this.onHpUpgrade, this);

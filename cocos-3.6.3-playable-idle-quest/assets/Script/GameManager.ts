@@ -43,14 +43,15 @@ export class GameManager extends Component {
         if (this.fake)
             return;
         //
-        director.emit(GameEvent.PLAYER_STOP);
-        director.emit(GameEvent.MONSTER_STOP);
+        director.emit(GameEvent.PLAYER_BODY_STOP);
+        director.emit(GameEvent.MONSTER_BODY_STOP);
         this.scheduleOnce(() => {
             director.emit(GameEvent.PLAYER_MOVE);
         }, this.delayPlayerMove);
         this.scheduleOnce(() => {
             director.emit(GameEvent.MONSTER_MOVE);
         }, this.delayMonsterMove);
+        
     }
 
     private onMonsterMove(): void {
@@ -66,8 +67,8 @@ export class GameManager extends Component {
             //console.log("[Manager] Wave Reset!");
             //
             this.scheduleOnce(() => {
-                director.emit(GameEvent.PLAYER_STOP);
-                director.emit(GameEvent.MONSTER_STOP);
+                director.emit(GameEvent.PLAYER_BODY_STOP);
+                director.emit(GameEvent.MONSTER_BODY_STOP);
                 this.scheduleOnce(() => {
                     director.emit(GameEvent.PLAYER_MOVE);
                 }, this.delayPlayerMove >= 0.1 ? this.delayPlayerMove - 0.1 : 0);
