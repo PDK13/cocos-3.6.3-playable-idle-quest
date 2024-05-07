@@ -1,8 +1,8 @@
 import { _decorator, AudioSource, Component, director, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('SoundManager')
-export class SoundManager extends Component {
+@ccclass('BaseSoundEvent')
+export class BaseSoundEvent extends Component {
     onLoad(){
         window.director = director;
         director.on("onVolumeChanged", this.onVolumeChanged, this);
