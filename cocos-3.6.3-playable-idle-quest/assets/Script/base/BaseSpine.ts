@@ -1,5 +1,6 @@
 import { _decorator, CCBoolean, Component, director, sp } from 'cc';
 const { ccclass, property } = _decorator;
+const { spine } = sp;
 
 @ccclass('BaseSpine')
 export class BaseSpine extends Component {
@@ -33,12 +34,34 @@ export class BaseSpine extends Component {
 
     //
 
+    public SetSkin(...SkinMix: any[]) {
+        let BaseSkin = new spine.Skin('base-char');
+        let BaseData = this.spine._skeleton.data;
+        //
+        SkinMix.forEach(item => {
+            BaseSkin.addSkin(BaseData.findSkin(item));
+        });
+        //
+        this.spine._skeleton.setSkin(BaseSkin);
+        this.spine._skeleton.setSlotsToSetupPose();
+        this.spine.getState().apply(this.spine._skeleton);
+    }
+
+    //
+
     public onPlay(): void {
         this.spine.timeScale = this.spineTimeScale;
     }
 
     public onStop(): void {
         this.spine.timeScale = 0;
+    }
+
+    //
+
+    public SetInitMix(AnimFrom: string, AnimTo: string, Duration: number) {
+        //Setting mix between 2 animation in fixed duration!
+        this.spine.setMix(AnimFrom, AnimTo, Duration);
     }
 
     //
@@ -84,6 +107,18 @@ export class BaseSpine extends Component {
     public SetTimeScale(TimeScale: number = 1) {
         this.spineTimeScale = TimeScale;
         this.spine.timeScale = TimeScale;
+    }
+
+    //
+
+    public SetAnimIndex(Index: number, Anim: string, Loop: boolean, DurationScale: boolean = false): number {
+        let Duration = this.spine.setAnimation(Index, Anim, Loop).animationEnd;
+        let Scale = DurationScale ? this.spine.timeScale : 1;
+        return Duration / Scale;
+    }
+
+    public SetAnimEmty(Index: number, MixDuration: number) {
+        this.spine.getState().setEmptyAnimation(Index, MixDuration);
     }
 
     //
