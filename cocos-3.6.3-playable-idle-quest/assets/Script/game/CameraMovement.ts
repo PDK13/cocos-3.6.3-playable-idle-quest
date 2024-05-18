@@ -71,13 +71,13 @@ export default class CameraMovement extends Component {
     m_target: Vec3;
     m_stop: boolean = false;
     m_finishPos: Vec3;
-    m_targetY: number = 0;
+    //m_targetY: number = 0;
     m_syncY: boolean = false;
 
     onLoad() {
         director.on(GameEvent.PLAYER_STOP, this.onFinish, this);
         director.on(GameEvent.PLAYER_X4, this.onPlayerX4, this);
-        director.on(GameEvent.PLAYER_GROUND, this.onPlayerGround, this);
+        //director.on(GameEvent.PLAYER_GROUND, this.onPlayerGround, this);
         director.on(GameEvent.PLAYER_BUBBLE, this.onPlayerBubble, this);
         director.on(GameEvent.PLAYER_NORMAL, this.onPlayerNormal, this);
         director.on(GameEvent.PLAYER_FLAG, this.onPlayerFlag, this);
@@ -116,13 +116,13 @@ export default class CameraMovement extends Component {
             else {
                 target = this.player.worldPosition.clone();
                 //
-                if (this.m_syncY)
-                    this.m_targetY = target.y;
-                else {
-                    if ((this.m_targetY - target.y) > 100)
-                        this.m_targetY = target.y;
-                    target.y = this.m_targetY + 300;
-                }
+                //if (this.m_syncY)
+                //    this.m_targetY = target.y;
+                //else {
+                //    if ((this.m_targetY - target.y) > 100)
+                //        this.m_targetY = target.y;
+                //    target.y = this.m_targetY + 300;
+                //}
                 //
                 //LOCK:
                 if (this.lockX)
@@ -219,7 +219,7 @@ export default class CameraMovement extends Component {
     }
 
     onPlayerGround(targetY: number) {
-        this.m_targetY = targetY;
+        //this.m_targetY = targetY;
     }
 
     onPlayerBubble() {
