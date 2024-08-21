@@ -10,6 +10,9 @@ export class GameManager extends Component {
     @property(CCBoolean)
     fake: boolean = false;
 
+    @property(CCInteger)
+    waveCount: number = 9999;
+
     @property(CCFloat)
     delayPlayerMove: number = 1;
 
@@ -51,7 +54,7 @@ export class GameManager extends Component {
         this.scheduleOnce(() => {
             director.emit(GameEvent.MONSTER_MOVE);
         }, this.delayMonsterMove);
-        
+
     }
 
     private onMonsterMove(): void {
@@ -65,6 +68,13 @@ export class GameManager extends Component {
         this.waveMonsterRemain--;
         if (this.waveMonsterRemain == 0) {
             //console.log("[Manager] Wave Reset!");
+            //
+            if (this.waveCurrent >= this.waveCount) {
+                director.emit(GameEvent.PLAYER_BODY_STOP);
+                director.emit(GameEvent.MONSTER_BODY_STOP);
+                director.emit(GameEvent.GAME_FINISH);
+                return;
+            }
             //
             this.scheduleOnce(() => {
                 director.emit(GameEvent.PLAYER_BODY_STOP);

@@ -264,7 +264,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 302.37,
+      "width": 1080,
       "height": 132
     },
     "_anchorPoint": {
@@ -281,7 +281,7 @@
     "node": {
       "__id__": 5
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": null,
     "_customMaterial": null,
     "_srcBlendFactor": 2,
@@ -2877,8 +2877,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 1.5,
+      "y": 1.5,
       "z": 1
     },
     "_layer": 33554432,
@@ -4672,7 +4672,7 @@
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 70,
-    "_fontSize": 100,
+    "_fontSize": 80,
     "_fontFamily": "Arial",
     "_lineHeight": 100,
     "_overflow": 0,
@@ -5484,7 +5484,7 @@
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 70,
-    "_fontSize": 100,
+    "_fontSize": 80,
     "_fontFamily": "Arial",
     "_lineHeight": 100,
     "_overflow": 0,
@@ -6057,11 +6057,7 @@
     "panelLose": {
       "__id__": 149
     },
-    "otherInput": [
-      null,
-      null,
-      null
-    ],
+    "otherInput": [],
     "_id": "f1yxeZCVtJZIVVj6qkvMfD"
   },
   {
@@ -6090,9 +6086,10 @@
     "__prefab": null,
     "fake": false,
     "coinCurent": 1000,
-    "gemCurent": 5,
+    "gemCurent": 100,
     "atkCurrent": 0,
     "hpCurrent": 0,
+    "upgrateAllow": false,
     "atkPrice": 100,
     "hpPrice": 100,
     "groupStatAtk": {
@@ -7534,7 +7531,7 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 850,
+      "width": 1000,
       "height": 250
     },
     "_id": "c9ioAzSppBNrudCUGyqbyR"
@@ -9460,7 +9457,7 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 850,
+      "width": 1000,
       "height": 250
     },
     "_id": "c1Eq8zioJILqn5DkkPa2TT"
@@ -10469,7 +10466,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "healthBase": 20,
+    "healthBase": 15,
     "mask": {
       "__id__": 298
     },
@@ -10671,6 +10668,7 @@
     "_enabled": true,
     "__prefab": null,
     "fake": false,
+    "waveCount": 1,
     "delayPlayerMove": 0.5,
     "delayMonsterMove": 0,
     "waveLabel": {

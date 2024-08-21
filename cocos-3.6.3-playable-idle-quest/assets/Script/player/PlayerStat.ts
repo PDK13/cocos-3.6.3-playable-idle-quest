@@ -25,6 +25,9 @@ export class PlayerStat extends Component {
     @property(CCInteger)
     public hpCurrent: number = 0; //+1000
 
+    @property(CCBoolean)
+    upgrateAllow: boolean = true;
+
     @property(CCInteger)
     atkPrice: number = 100;
 
@@ -70,8 +73,10 @@ export class PlayerStat extends Component {
             return;
         }
         //
-        this.groupStatAtk.getChildByName('btn-upgrade').on(Input.EventType.TOUCH_START, this.onAtkUpgrade, this);
-        this.groupStatHp.getChildByName('btn-upgrade').on(Input.EventType.TOUCH_START, this.onHpUpgrade, this);
+        if (this.upgrateAllow) {
+            this.groupStatAtk.getChildByName('btn-upgrade').on(Input.EventType.TOUCH_START, this.onAtkUpgrade, this);
+            this.groupStatHp.getChildByName('btn-upgrade').on(Input.EventType.TOUCH_START, this.onHpUpgrade, this);
+        }
     }
 
     protected start(): void {
@@ -85,7 +90,7 @@ export class PlayerStat extends Component {
     private onDirectorStore(): void {
         director.emit(GameEvent.GAME_RETRY);
     }
-    
+
     private onMonsterDead(): void {
         this.SetCoinAdd(100);
     }
