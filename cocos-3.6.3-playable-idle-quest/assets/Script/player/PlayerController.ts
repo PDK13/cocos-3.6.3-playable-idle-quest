@@ -1,4 +1,4 @@
-import { _decorator, CCFloat, CCString, Collider2D, Component, Contact2DType, director, IPhysics2DContact, Node, RigidBody2D, v2, v3, Vec2, Vec3 } from 'cc';
+import { _decorator, CCBoolean, CCFloat, CCString, Collider2D, Component, Contact2DType, director, IPhysics2DContact, Node, RigidBody2D, v2, v3, Vec2, Vec3 } from 'cc';
 import GameEvent from '../GameEvent';
 import GameTag from '../GameTag';
 import { BaseSpineCustom } from '../base/BaseSpineCustom';
@@ -40,6 +40,12 @@ export class PlayerController extends Component {
     @property(CCString)
     animSkillSlash2: string = 'attack_15';
 
+    @property(CCBoolean)
+    delayAttackFixed: boolean = false;
+
+    @property(CCFloat)
+    delayAttack: number = 0.5;
+
     spine: BaseSpineCustom = null;
     shoot: BaseShoot = null;
     health: BaseHealth = null;
@@ -47,6 +53,8 @@ export class PlayerController extends Component {
 
     atkBase: number = 0;
     hpBase: number = 0;
+
+    baseIndex: number;
 
     public atkCurrent(): number {
         return this.atkBase + PlayerStat.instance.atkCurrent;
@@ -87,6 +95,8 @@ export class PlayerController extends Component {
         //
         this.atkBase = 1;
         this.hpBase = this.health.GetHealthBase();
+        //
+        this.baseIndex = this.node.getSiblingIndex();
     }
 
     //
@@ -140,9 +150,11 @@ export class PlayerController extends Component {
         if (!this.stageAttack)
             return;
         //
-        var Delay = this.spine.SetAnim(this.animAttackFirst ? this.animAttack1 : this.animAttack2, false);
+        var Delay = this.spine.SetAnim(this.animAttackFirst ? this.animAttack1 : this.animAttack2, this.animAttack1 == this.animAttack2);
         this.animAttackFirst = !this.animAttackFirst;
         this.shoot.SetShootDirection(v2(1, 0));
+        if (this.delayAttackFixed)
+            this.scheduleOnce(() => this.shoot.SetShootDirection(v2(1, 0)), this.delayAttack);
         this.scheduleOnce(() => this.SetAttack(), Delay);
     }
 
@@ -199,6 +211,7 @@ export class PlayerController extends Component {
         //
         if (Counter > GameManager.instance.waveMonster.length - 1) {
             Player.setPosition(Vec3.ZERO);
+            //Player.setSiblingIndex(this.baseIndex);
             this.spine.SetAnim(this.animIdle, true);
             this.scheduleOnce(() => {
                 //NOTE: Not change this group of code, because SPINE and BULLET must called first before end SLASH!
@@ -216,8 +229,9 @@ export class PlayerController extends Component {
         PlayerSpinePosition.x = Monster.position.x - this.node.position.x - 100;
         PlayerSpinePosition.y = Monster.position.y - this.node.position.y;
         Player.setPosition(PlayerSpinePosition);
+        //Player.setSiblingIndex(Monster.getSiblingIndex() - 1);
         //
-        var DelayTeleport = this.spine.SetAnim(Counter % 2 == 0 ? this.animSkillSlash1 : this.animSkillSlash2, false);
+        var DelayTeleport = this.spine.SetAnim(Counter % 2 == 0 ? this.animSkillSlash1 : this.animSkillSlash2, this.animSkillSlash1 == this.animSkillSlash2);
         this.scheduleOnce(() => {
             this.SetPlayerSkillSlashSingle(Counter + 1);
         }, DelayTeleport);

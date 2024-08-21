@@ -44,6 +44,7 @@ export class MonsterController extends Component {
     posPrimary: Vec3;
     isMoving: boolean = false;
     isDead: boolean = false;
+    spineTimeScale: number = 1;
 
     protected onLoad(): void {
         this.spine = this.node.getComponent(BaseSpine);
@@ -68,6 +69,7 @@ export class MonsterController extends Component {
     protected start(): void {
         this.spine.SetFaceL();
         this.posPrimary = this.node.position.clone();
+        this.spineTimeScale = this.spine.spine.timeScale;
     }
 
     //
@@ -98,6 +100,7 @@ export class MonsterController extends Component {
         //
         this.unscheduleAllCallbacks();
         this.SetIdle();
+        this.spine.SetTimeScale(this.spineTimeScale);
     }
 
     //
@@ -105,6 +108,7 @@ export class MonsterController extends Component {
     private SetMove(): void {
         this.isMoving = true;
         this.spine.SetAnim(this.animMove, true);
+        this.spine.SetTimeScale(this.spineTimeScale);
         this.rigidbody.linearVelocity = v2(-this.moveSpeed, 0);
     }
 
@@ -147,6 +151,8 @@ export class MonsterController extends Component {
         this.isDead = true;
         //
         var Delay = this.spine.SetAnim(this.animDead, false);
+        if (this.animDead == this.animIdle)
+            this.spine.SetTimeScale(0.5);
         this.rigidbody.linearVelocity = Vec2.ZERO;
         //
         this.spineDead.node.active = true;
