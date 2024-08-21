@@ -50,7 +50,8 @@ export class MonsterController extends Component {
         this.spine = this.node.getComponent(BaseSpine);
         this.shoot = this.node.getComponent(BaseShoot);
         this.health = this.node.getComponent(BaseHealth);
-        this.spineDead = this.node.getChildByName('spine-dead').getComponent(BaseSpine);
+        if (this.node.getChildByName('spine-dead') != null)
+            this.spineDead = this.node.getChildByName('spine-dead').getComponent(BaseSpine);
         //
         this.rigidbody = this.node.getComponent(RigidBody2D);
         //
@@ -88,7 +89,8 @@ export class MonsterController extends Component {
             this.health.SetHealthBaseAdd(this.reviveHealthAdd);
             this.health.SetHealth(9999);
             this.isDead = false;
-            this.node.getChildByName('spine-dead').active = false;
+            if (this.spineDead != null)
+                this.spineDead.node.active = false;
         }
         //
         this.SetIdle();
@@ -155,8 +157,10 @@ export class MonsterController extends Component {
             this.spine.SetTimeScale(0.5);
         this.rigidbody.linearVelocity = Vec2.ZERO;
         //
-        this.spineDead.node.active = true;
-        this.spineDead.SetAnimForce('animation', false);
+        if (this.spineDead != null) {
+            this.spineDead.node.active = true;
+            this.spineDead.SetAnimForce('animation', false);
+        }
         //
         this.scheduleOnce(() => {
             this.node.setPosition(this.posPrimary);
