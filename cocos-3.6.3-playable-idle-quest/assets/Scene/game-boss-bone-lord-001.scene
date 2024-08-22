@@ -90,7 +90,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 540.0000000000001,
-      "y": 959.9999999999999,
+      "y": 960.0000000000001,
       "z": 0
     },
     "_lrot": {
@@ -171,7 +171,7 @@
     "_priority": 1,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 959.9999999999999,
+    "_orthoHeight": 960.0000000000001,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -5983,8 +5983,8 @@
     "_target": null,
     "_left": 1.1368683772161603e-13,
     "_right": -1.1368683772161603e-13,
-    "_top": -1.1368683772161603e-13,
-    "_bottom": -1.1368683772161603e-13,
+    "_top": 1.1368683772161603e-13,
+    "_bottom": 1.1368683772161603e-13,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
     "_isAbsLeft": true,
@@ -6044,7 +6044,7 @@
     "loop": false,
     "auto": false,
     "directStore": true,
-    "androidLink": "https://play.google.com/store/apps/details?id=com.mgif.idle.quest&gl=us",
+    "androidLink": "https://play.google.com/store/apps/details?id=com.afk.idle.hunter.eternal.soul",
     "iosLink": "",
     "adsType": 0,
     "panelComplete": {
